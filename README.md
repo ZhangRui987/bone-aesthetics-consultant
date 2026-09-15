@@ -34,6 +34,30 @@ cp -r bone-aesthetics-consultant ~/.claude/skills/
 
 打开 [`SKILL.md`](SKILL.md)，复制 frontmatter 之后的全部正文，粘贴到智能体的"人设与回复逻辑"（或对话首条消息）即可。
 
+> **注意**：封闭式聊天助手（豆包、元宝等 App 端）没有本地执行环境，无法运行安装脚本——对这类端请一律使用本粘贴方式。
+
+### 方式三：小红书 Red Skill 商店（OpenClaw / Claude Code 等终端型 Agent）
+
+小红书 Red Skill 已上架（ID：`bone-aesthetics-consultant-1`），在支持终端的 Agent 环境中一键安装：
+
+```bash
+# 安装 RedSkill 商店 CLI（如已安装可跳过）
+curl -fsSL https://redskill.xiaohongshu.net/install.sh | bash
+export PATH="$HOME/.local/bin:$PATH"
+
+# 安装本技能
+redskill install bone-aesthetics-consultant-1
+redskill list   # 确认已安装
+```
+
+### 安装方式选择矩阵
+
+| 你的环境 | 推荐方式 |
+|---------|---------|
+| Claude Code / OpenClaw 等终端型 Agent | 方式一（克隆）或 方式三（Red Skill 商店） |
+| 豆包 / Kimi 等 App 端聊天助手 | 方式二（粘贴 SKILL.md 正文创建智能体） |
+| 想读源码 / 二次开发 | 直接克隆仓库，规则层在 `references/rules.md` |
+
 ### 对话流程示例
 
 ```

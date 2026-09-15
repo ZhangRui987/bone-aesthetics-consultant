@@ -74,6 +74,25 @@ AI：确认大改范围 → 输出"模拟效果"警示 → 执行（红线仍生
 
 **快捷指令**：`直接 P`（跳过确认）｜ `继续`（下一区域）｜ `回退` ｜ `对比` ｜ `我要大改`（解锁骨相级调整，仍受规则约束）
 
+## 分享给朋友（裂变话术）
+
+> 注意：**不要**说"安装到手机上"——豆包等 App 端没有安装 GitHub 技能的能力，会让 AI 误判为普通代码仓库。按接收方环境选下面的话术：
+
+**① 对方用豆包 / Kimi 等 App 端（最常见）**，让 ta 把这段话发给豆包：
+
+```
+请打开并完整阅读这个文档：https://raw.githubusercontent.com/ZhangRui987/bone-aesthetics-consultant/main/SKILL.md
+然后严格按照文档中的工作流、避坑硬规则和失真红线，以"骨相美学顾问"的身份为我服务，我接下来会发照片给你做脸型诊断。
+```
+
+**② 对方用 OpenClaw / Claude Code（终端型 Agent）**，发小红书 Red Skill 口令：
+
+```
+请把这个技能安装到我的 Agent 上：https://www.xiaohongshu.com（Red Skill 商店搜索：骨相美学顾问，ID：bone-aesthetics-consultant-1）
+```
+
+**③ 对方是开发者**，直接发仓库链接：https://github.com/ZhangRui987/bone-aesthetics-consultant
+
 ## 核心设计：治理层
 
 技能的价值不止于"会修图"，更在于"不乱修"：

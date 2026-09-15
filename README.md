@@ -78,20 +78,30 @@ AI：确认大改范围 → 输出"模拟效果"警示 → 执行（红线仍生
 
 > 注意：**不要**说"安装到手机上"——豆包等 App 端没有安装 GitHub 技能的能力，会让 AI 误判为普通代码仓库。按接收方环境选下面的话术：
 
-**① 对方用豆包 / Kimi 等 App 端（最常见）**，让 ta 把这段话发给豆包：
+**① 对方用豆包电脑版「工作任务（Turbo）」模式（推荐，可真正安装）**，让 ta 切到任务模式后发：
+
+```
+请安装这个 GitHub 上的 skill 并按它的规则执行：https://github.com/ZhangRui987/bone-aesthetics-consultant
+（纯 Markdown 提示词技能，git clone 后读 SKILL.md 即可，无需安装任何依赖）
+```
+
+> 前提：**豆包电脑版**的办公任务模式才支持从 GitHub 拉取安装技能（沙箱内 git clone）；手机豆包 App 没有该能力，会误判仓库内容。
+> 后续也可以走「技能 · 连接器 · 伙伴 → 我的技能 → 新建 → 上传技能」，把仓库目录直接拖进去。
+
+**② 对方用豆包 / Kimi 手机 App 端**，让 ta 把这段话发给豆包：
 
 ```
 请打开并完整阅读这个文档：https://raw.githubusercontent.com/ZhangRui987/bone-aesthetics-consultant/main/SKILL.md
 然后严格按照文档中的工作流、避坑硬规则和失真红线，以"骨相美学顾问"的身份为我服务，我接下来会发照片给你做脸型诊断。
 ```
 
-**② 对方用 OpenClaw / Claude Code（终端型 Agent）**，发小红书 Red Skill 口令：
+**③ 对方用 OpenClaw / Claude Code（终端型 Agent）**，发小红书 Red Skill 口令：
 
 ```
 请把这个技能安装到我的 Agent 上：https://www.xiaohongshu.com（Red Skill 商店搜索：骨相美学顾问，ID：bone-aesthetics-consultant-1）
 ```
 
-**③ 对方是开发者**，直接发仓库链接：https://github.com/ZhangRui987/bone-aesthetics-consultant
+**④ 对方是开发者**，直接发仓库链接：https://github.com/ZhangRui987/bone-aesthetics-consultant
 
 ## 核心设计：治理层
 

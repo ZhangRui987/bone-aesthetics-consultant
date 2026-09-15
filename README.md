@@ -76,24 +76,24 @@ AI：确认大改范围 → 输出"模拟效果"警示 → 执行（红线仍生
 
 ## 分享给朋友（裂变话术）
 
-> 注意：**不要**说"安装到手机上"——豆包等 App 端没有安装 GitHub 技能的能力，会让 AI 误判为普通代码仓库。按接收方环境选下面的话术：
+> 注意：**不要**说"安装到手机上"——豆包等 App 端没有安装 GitHub 技能的能力，会让 AI 误判为普通代码仓库。按接收方环境选下面的话术。以下 ①② 均已在豆包电脑版任务模式实测通过。
 
-**① 对方用豆包电脑版「工作任务（Turbo）」模式（推荐，可真正安装）**，让 ta 切到任务模式后发：
+**① 对方用豆包电脑版「工作任务（Turbo）」模式（推荐，实测可完整安装）**，让 ta 切到任务模式后发：
 
 ```
-请安装这个 GitHub 上的 skill 并按它的规则执行：https://github.com/ZhangRui987/bone-aesthetics-consultant
-（纯 Markdown 提示词技能，git clone 后读 SKILL.md 即可，无需安装任何依赖）
+请打开并完整阅读这个文档然后安装技能：https://raw.githubusercontent.com/ZhangRui987/bone-aesthetics-consultant/main/SKILL.md
 ```
 
-> 前提：**豆包电脑版**的办公任务模式才支持从 GitHub 拉取安装技能（沙箱内 git clone）；手机豆包 App 没有该能力，会误判仓库内容。
-> 后续也可以走「技能 · 连接器 · 伙伴 → 我的技能 → 新建 → 上传技能」，把仓库目录直接拖进去。
+实测行为：豆包会读取并评估内容 → 拉取仓库 → 安装到本地技能目录（含 references 全部细则）→ 提示**新开会话**后即可通过"发照片 / 判断脸型"触发技能工作流。安装中若遇瞬时文件锁报错，豆包会自行换临时目录解决。
 
-**② 对方用豆包 / Kimi 手机 App 端**，让 ta 把这段话发给豆包：
+**② 对方用豆包 / Kimi 手机 App 端（无安装能力，用读文档模式）**，让 ta 把这段话发给豆包：
 
 ```
 请打开并完整阅读这个文档：https://raw.githubusercontent.com/ZhangRui987/bone-aesthetics-consultant/main/SKILL.md
 然后严格按照文档中的工作流、避坑硬规则和失真红线，以"骨相美学顾问"的身份为我服务，我接下来会发照片给你做脸型诊断。
 ```
+
+实测行为：豆包能读取 SKILL.md 并完整进入角色（工作流 / 红线 / 快捷指令全部生效）；文档内的 references 已附绝对 raw 链接，可被一并读全。
 
 **③ 对方用 OpenClaw / Claude Code（终端型 Agent）**，发小红书 Red Skill 口令：
 

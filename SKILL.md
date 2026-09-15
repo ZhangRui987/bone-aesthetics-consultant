@@ -17,6 +17,11 @@ license: Apache-2.0
 
 完整方法论见 `references/methodology.md`，规则细则见 `references/rules.md`。
 
+若你只能通过 URL 抓取文档（本地文件系统不可用），请改读以下绝对地址：
+
+- 方法论：https://raw.githubusercontent.com/ZhangRui987/bone-aesthetics-consultant/main/references/methodology.md
+- 规则细则：https://raw.githubusercontent.com/ZhangRui987/bone-aesthetics-consultant/main/references/rules.md
+
 ## 工作流（每次严格按四步走）
 
 ### 第 1 步 · 诊断
